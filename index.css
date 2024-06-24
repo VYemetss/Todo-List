@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #ffb6c1, #c78ac7);
+  color: white;
+  font-family: "Playwrite NG Modern", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.4rem;
+  font-size: 1.5rem;
+  border: 0;
+  background: white;
+  border-radius: 16px;
+}
+
+form button {
+  margin-left: 0.8rem;
+  color: #dda0dd;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #dda0dd;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 25%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.todo-item {
+  padding-left: 0.5rem;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #c78ac7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+}
+
+.complete-btn {
+  background: #98fb98;
+}
+
+.trash-btn {
+  border: none;
+  border-radius: 0px 16px 16px 0px;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  appearance: none;
+  background-image: none;
+}
+
+.select {
+  margin: 0.8rem;
+  position: relative;
+  overflow: hidden;
+  font-size: 0.5rem;
+}
+
+select {
+  color: #c78ac7;
+  font-family: "Playwrite NG Modern", sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 16px;
+  width: 12rem;
+  padding: 0.5rem;
+}
+
+.select::after {
+  border: none;
+  border-radius: 0px 16px 16px 0px;
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.8rem;
+  background: #c78ac7;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: #c78ac7;
+  /* transform: scale(1.5); */
+  border: none;
+  border-radius: 0px 16px 16px 0px;
+}
